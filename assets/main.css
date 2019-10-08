@@ -16,3 +16,19 @@ nav {
 .section .title-line {
     color: #e31837;
 }
+
+.section.research {
+    font-family: "Roboto", Sans-serif;
+    font-weight: 600;
+}
+
+.section.research .title-line {
+    font-size: 24px;
+}
+
+.section.research .content {
+    color: #7a7a7a;
+    font-family: "Roboto", Sans-serif;
+    font-weight: 400;
+    font-size: 13px;
+}
