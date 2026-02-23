@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>QCQM Research Center | NSYSU</title>
+  <link rel="stylesheet" href="css/main.css">
+  <style>
+    /* 針對首頁豐富度的額外樣式 */
+    .feature-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+      margin-top: 50px;
+    }
+    .feature-card {
+      background: white;
+      padding: 40px 30px;
+      border-radius: 15px;
+      text-align: center;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+      transition: transform 0.3s ease;
+      border-top: 5px solid var(--primary-blue);
+    }
+    .feature-card:hover { transform: translateY(-10px); }
+    .feature-card i { font-size: 3rem; color: var(--quantum-gold); margin-bottom: 20px; display: block; }
+    .feature-card h3 { color: var(--primary-blue); margin-bottom: 15px; font-size: 1.4rem; }
+    .feature-card p { font-size: 0.95rem; color: #666; line-height: 1.6; }
+    
+    .stats-bar {
+      background: var(--primary-blue);
+      color: white;
+      padding: 60px 10%;
+      display: flex;
+      justify-content: space-around;
+      text-align: center;
+      margin-top: 80px;
+      border-radius: 20px;
+    }
+    .stat-item h2 { font-size: 2.5rem; color: var(--quantum-gold); margin-bottom: 5px; }
+    .stat-item p { font-size: 1rem; opacity: 0.8; }
+  </style>
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="logo"><a href="index_en.html">QCQM Research Center</a></div>
+  <div class="nav-container">
+    <ul>
+      <li><a href="index_en.html">Home</a></li>
+      <li><a href="pages/en/about.html">About</a></li>
+      <li><a href="pages/en/research.html">Research</a></li>
+      <li><a href="pages/en/people.html">People</a></li>
+      <li><a href="pages/en/news.html">News and Events</a></li>
+    </ul>
+    <div class="lang-switch">
+      <a href="index.html">中文</a> | <a href="index_en.html" class="active">EN</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero">
+  <canvas id="quantum-canvas"></canvas>
+  <div class="hero-content">
+    <h1 style="font-size: 2.8rem; margin-bottom: 15px; line-height: 1.2;">
+      Research Center for <br>
+      Quantum Computing and Quantum Materials
+    </h1>
+    <p style="font-size: 1.3rem; letter-spacing: 1px; font-weight: 300; opacity: 0.9;">
+      National Sun Yat-sen University (NSYSU)
+    </p>
+  </div>
+</header>
+
+<section class="section">
+  <div style="max-width: 1000px; margin: 0 auto;">
+    <div style="text-align: center; margin-bottom: 60px;">
+      <h2 style="color: var(--primary-blue); font-size: 2.2rem; margin-bottom: 20px;">Advancing the Quantum Frontier</h2>
+      <p style="font-size: 1.15rem; line-height: 1.8; color: #444;">
+        QCQM Research Center at NSYSU is a multidisciplinary hub dedicated to the exploration of next-generation quantum technologies. By integrating theoretical physics, material science, and advanced engineering, we strive to unlock the potential of quantum information and novel materials.
+      </p>
+    </div>
+
+    <div class="feature-grid">
+      <div class="feature-card">
+        <h3>Quantum Computing</h3>
+        <p>Developing scalable superconducting qubits, fluxonium circuits, and exploring topological quantum computing architectures.</p>
+      </div>
+      <div class="feature-card">
+        <h3>Quantum Materials</h3>
+        <p>Synthesis of novel 2D materials, superconductors, and topological insulators using state-of-the-art CVD and growth techniques.</p>
+      </div>
+      <div class="feature-card">
+        <h3>Theory & Simulation</h3>
+        <p>Utilizing high-performance band structure calculations and quantum information theory to predict and model new physical phenomena.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="stats-bar">
+    <div class="stat-item">
+      <h2>10+</h2>
+      <p>Research Faculty</p>
+    </div>
+    <div class="stat-item">
+      <h2>2</h2>
+      <p>Core Groups</p>
+    </div>
+    <div class="stat-item">
+      <h2>3</h2>
+      <p>International Partners</p>
+    </div>
+  </div>
+</section>
+
+<footer>© QCQM Research Center, National Sun Yat-sen University</footer>
+
+<script>
+  // 量子粒子動態背景
+  const canvas = document.getElementById('quantum-canvas');
+  const ctx = canvas.getContext('2d');
+  let particles = [];
+
+  function init() {
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+    particles = [];
+    for(let i=0; i<80; i++) {
+      particles.push({
+        x: Math.random() * canvas.width,
+        y: Math.random() * canvas.height,
+        vx: (Math.random() - 0.5) * 0.4,
+        vy: (Math.random() - 0.5) * 0.4,
+        r: Math.random() * 2 + 1
+      });
+    }
+  }
+
+  function draw() {
+    ctx.clearRect(0,0,canvas.width, canvas.height);
+    ctx.fillStyle = 'rgba(197, 160, 89, 0.4)';
+    ctx.strokeStyle = 'rgba(255, 255, 255, 0.05)';
+    
+    particles.forEach((p, i) => {
+      p.x += p.vx;
+      p.y += p.vy;
+      if(p.x < 0 || p.x > canvas.width) p.vx *= -1;
+      if(p.y < 0 || p.y > canvas.height) p.vy *= -1;
+      
+      ctx.beginPath();
+      ctx.arc(p.x, p.y, p.r, 0, Math.PI*2);
+      ctx.fill();
+
+      for(let j=i+1; j<particles.length; j++) {
+        let p2 = particles[j];
+        let dist = Math.hypot(p.x - p2.x, p.y - p2.y);
+        if(dist < 150) {
+          ctx.beginPath();
+          ctx.moveTo(p.x, p.y);
+          ctx.lineTo(p2.x, p2.y);
+          ctx.stroke();
+        }
+      }
+    });
+    requestAnimationFrame(draw);
+  }
+
+  window.addEventListener('resize', init);
+  init();
+  draw();
+</script>
+
+</body>
+</html>

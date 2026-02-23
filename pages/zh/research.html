@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <title>研究領域 | QCQM</title>
+  <link rel="stylesheet" href="../../css/main.css">
+  <style>
+    .research-container { max-width: 1100px; margin: 0 auto; padding: 40px 20px; }
+    .research-intro { text-align: center; margin-bottom: 60px; color: #444; }
+    
+    /* 研究領域區塊佈局 */
+    .research-grid { display: grid; grid-template-columns: 1fr; gap: 40px; }
+    
+    .research-item { 
+      display: flex; 
+      background: white; 
+      border-radius: 15px; 
+      overflow: hidden; 
+      box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+      transition: transform 0.3s ease;
+    }
+    .research-item:hover { transform: scale(1.02); }
+    
+    /* 區塊圖片 */
+    .research-img { 
+      width: 40%; 
+      min-height: 300px; 
+      background: #f0f0f0; 
+      object-fit: cover; 
+    }
+    
+    /* 區塊文字內容 */
+    .research-info { width: 60%; padding: 40px; display: flex; flex-direction: column; justify-content: center; }
+    .research-info h2 { color: var(--primary-blue); margin-top: 0; font-size: 1.6rem; border-left: 4px solid var(--quantum-gold); padding-left: 15px; }
+    .research-tags { margin-bottom: 20px; }
+    .research-tags span { 
+      background: #f0f4f8; 
+      color: var(--accent-blue); 
+      padding: 4px 12px; 
+      border-radius: 20px; 
+      font-size: 0.85rem; 
+      margin-right: 8px;
+      font-weight: 500;
+    }
+    .research-info p { color: #666; line-height: 1.8; margin-bottom: 25px; }
+    
+    .link-group { display: flex; gap: 15px; }
+    .btn-publication { 
+      text-decoration: none; 
+      color: var(--quantum-gold); 
+      border: 1px solid var(--quantum-gold); 
+      padding: 8px 20px; 
+      border-radius: 5px; 
+      font-size: 0.9rem;
+      transition: all 0.3s;
+    }
+    .btn-publication:hover { background: var(--quantum-gold); color: white; }
+
+    /* 手機版適應性 */
+    @media (max-width: 768px) {
+      .research-item { flex-direction: column; }
+      .research-img, .research-info { width: 100%; }
+      .research-img { min-height: 200px; }
+    }
+  </style>
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="logo"><a href="../../index.html">QCQM Research Center</a></div>
+  <div class="nav-container">
+    <ul>
+      <li><a href="../../index.html">首頁</a></li>
+      <li><a href="about.html">關於中心</a></li>
+      <li><a href="research.html" class="active">研究領域</a></li>
+      <li><a href="people.html">成員介紹</a></li>
+      <li><a href="news.html">最新消息與活動</a></li>
+    </ul>
+    <div class="lang-switch">
+      <a href="research.html" class="active">中文</a> | <a href="../en/research.html">EN</a>
+    </div>
+  </div>
+</nav>
+
+<div class="research-container">
+  <div class="research-intro">
+    <h1 style="color:var(--primary-blue); font-size: 2.5rem;">研究領域</h1>
+    <p>我們的研究涵蓋從基礎材料生長到高階量子位元電路的全方位整合。</p>
+  </div>
+
+  <div class="research-grid">
+    
+    <div class="research-item">
+      <img src="../../images/research/qubit.jpg" alt="Superconducting Qubits" class="research-img">
+      <div class="research-info">
+        <div class="research-tags"><span>2D Transmon</span><span>3D Transmon</span><span>Fluxonium</span></div>
+        <h2>1. 超導量子位元</h2>
+        <p>研發高性能超導量子電路，包含傳統 Transmon 架構的優化以及具備高非諧性（anharmonicity）與長相干時間的 Fluxonium 量子位元開發。</p>
+        <div class="link-group">
+          <a href="#" class="btn-publication">詳細內容</a>
+          <a href="https://scholar.google.com/" target="_blank" class="btn-publication">相關論文</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="research-item">
+      <img src="../../images/research/hybrid.jpg" alt="Hybrid Circuits" class="research-img">
+      <div class="research-info">
+        <div class="research-tags"><span>Graphene</span><span>Topological Materials</span><span>Gatemon</span></div>
+        <h2>2. 整合量子材料之 Hybrid 超導量子電路</h2>
+        <p>利用石墨烯與拓樸材料開發混合式超導電路，探索電場可調控（Gate-tunable）的 Gatemon 元件及 3D Transmon 之新型態應用。</p>
+        <div class="link-group">
+          <a href="#" class="btn-publication">詳細內容</a>
+          <a href="#" class="btn-publication">相關論文</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="research-item">
+      <img src="../../images/research/optics.jpg" alt="Quantum Optics" class="research-img">
+      <div class="research-info">
+        <div class="research-tags"><span>Neutral Atoms</span><span>Theoretical Physics</span></div>
+        <h2>3. 量子光學及理論</h2>
+        <p>針對中性原子系統開發量子光學理論模型，並探索其在量子計算與量子仿真中的應用潛力。</p>
+        <div class="link-group">
+          <a href="#" class="btn-publication">詳細內容</a>
+          <a href="#" class="btn-publication">相關論文</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="research-item">
+      <img src="../../images/research/materials.jpg" alt="Materials Synthesis" class="research-img">
+      <div class="research-info">
+        <div class="research-tags"><span>Band Structure</span><span>CVD Growth</span><span>Characterization</span></div>
+        <h2>4. 量子材料之理論、分析及合成</h2>
+        <p>包含拓樸材料的能帶計算模擬、二維材料的化學氣相沉積（CVD）成長技術及精密物理性質表徵。</p>
+        <div class="link-group">
+          <a href="#" class="btn-publication">詳細內容</a>
+          <a href="#" class="btn-publication">相關論文</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="research-item">
+      <img src="../../images/research/jj.jpg" alt="Topological JJ" class="research-img">
+      <div class="research-info">
+        <div class="research-tags"><span>Josephson Junction</span><span>Topological Qubits</span></div>
+        <h2>5. 拓樸材料約瑟夫森結元件</h2>
+        <p>專注於製作基於拓樸材料之約瑟夫森結，開發適用於拓樸量子計算的高穩定性關鍵元件。</p>
+        <div class="link-group">
+          <a href="#" class="btn-publication">詳細內容</a>
+          <a href="#" class="btn-publication">相關論文</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<footer>© QCQM Research Center, National Sun Yat-sen University</footer>
+</body>
+</html>

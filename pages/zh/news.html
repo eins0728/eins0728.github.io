@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <title>最新消息與活動 | QCQM</title>
+  <link rel="stylesheet" href="../../css/main.css">
+  <style>
+    .news-container { max-width: 1100px; margin: 0 auto; padding: 40px 20px; }
+    .section-header { border-bottom: 2px solid var(--primary-blue); margin: 40px 0 20px; padding-bottom: 10px; display: flex; align-items: center; }
+    .section-header h2 { color: var(--primary-blue); margin: 0; font-size: 1.8rem; }
+    
+    /* 活動圖卡樣式 (仿 QFort) */
+    .event-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 30px; margin-bottom: 60px; }
+    .event-card { background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.1); transition: transform 0.3s; text-decoration: none; color: inherit; display: block; }
+    .event-card:hover { transform: translateY(-8px); }
+    .event-img { width: 100%; height: 200px; object-fit: cover; background: #eee; }
+    .event-body { padding: 20px; }
+    .event-date { color: var(--quantum-gold); font-weight: bold; font-size: 0.9rem; margin-bottom: 10px; display: block; }
+    .event-title { font-size: 1.25rem; margin-bottom: 10px; color: #333; line-height: 1.4; }
+    .event-desc { font-size: 0.95rem; color: #666; line-height: 1.6; }
+
+    /* 最新消息列表樣式 */
+    .news-list { list-style: none; padding: 0; }
+    .news-item { display: flex; padding: 15px 0; border-bottom: 1px solid #eee; align-items: baseline; }
+    .news-item .date { width: 120px; color: #888; font-family: monospace; }
+    .news-item .title { flex: 1; color: #333; text-decoration: none; }
+    .news-item .title:hover { color: var(--accent-blue); }
+    .news-tag { background: #e3f2fd; color: #1976d2; padding: 2px 8px; border-radius: 4px; font-size: 0.8rem; margin-right: 15px; }
+  </style>
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="logo"><a href="../../index.html">QCQM Research Center</a></div>
+  <div class="nav-container">
+    <ul>
+      <li><a href="../../index.html">首頁</a></li>
+      <li><a href="about.html">關於中心</a></li>
+      <li><a href="research.html">研究領域</a></li>
+      <li><a href="people.html">成員介紹</a></li>
+      <li><a href="news.html" class="active">最新消息與活動</a></li>
+    </ul>
+    <div class="lang-switch">
+      <a href="news.html" class="active">中文</a> | <a href="../en/news.html">EN</a>
+    </div>
+  </div>
+</nav>
+
+<div class="news-container">
+  <div class="section-header">
+    <h2>最新活動 Events</h2>
+  </div>
+  
+  <div class="event-grid">
+    <a href="https://smartcityonline.org.tw/forum_detail.php?id=6412fef87392ae8c987b0ecc79da1902" target="_blank" class="event-card">
+      <img src="../../images/smart_city_forum.jpg" alt="量子論壇" class="event-img"> <div class="event-body">
+        <span class="event-date">2026.03.22 (週日)</span>
+        <h3 class="event-title">2026 高雄智慧城市展 - 量子論壇</h3>
+        <p class="event-desc">
+          本中心將於高雄智慧城市展舉辦「量子論壇」，邀請國內知名量子學者與企業進行技術交流，推廣量子科技應用。 [cite: 35, 78]
+        </p>
+      </div>
+    </a>
+
+    <div class="event-card" style="opacity: 0.6; display: flex; align-items: center; justify-content: center; background: #f0f0f0;">
+      <p>更多活動籌備中...</p>
+    </div>
+  </div>
+
+  <div class="section-header">
+    <h2>最新消息 News</h2>
+  </div>
+  
+  <ul class="news-list">
+    <li class="news-item">
+      <span class="date">2026-02-19</span>
+      <span class="news-tag">中心公告</span>
+      <a href="#" class="title">量子計算與量子材料研究中心（QCQM）正式成立計畫啟動 [cite: 4, 14]</a>
+    </li>
+    <li class="news-item">
+      <span class="date">2026-02-10</span>
+      <span class="news-tag">研究成果</span>
+      <a href="#" class="title">恭喜XXX團隊研究成果榮登《Physical Review Applied》國際期刊 [cite: 33]</a>
+    </li>
+  </ul>
+</div>
+
+<footer>© QCQM Research Center, National Sun Yat-sen University</footer>
+</body>
+</html>

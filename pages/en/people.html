@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>People | QCQM</title>
+  <link rel="stylesheet" href="../../css/main.css">
+  <style>
+    /* 針對 People 頁面樣式優化 */
+    .section-title {
+      text-align: center;
+      color: var(--primary-blue);
+      margin: 60px 0 40px 0;
+      font-size: 2.2rem;
+      border-bottom: 2px solid #eee;
+      padding-bottom: 15px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); 
+      gap: 40px;
+      margin-bottom: 50px;
+    }
+
+    .card { 
+      text-align: center; 
+      display: flex; 
+      flex-direction: column; 
+      align-items: center; 
+      padding: 30px 20px;
+      background: white;
+      border-radius: 15px;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    }
+    .card:hover { transform: translateY(-5px); box-shadow: 0 10px 25px rgba(0,0,0,0.1); }
+
+    .profile-img-container {
+      width: 250px; 
+      height: 250px; 
+      margin-bottom: 25px;
+      border-radius: 50%; 
+      overflow: hidden;   
+      border: 6px solid #fff; 
+      box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+      background: #f8f8f8;
+    }
+
+    .profile-img { 
+      width: 100%;
+      height: 100%;
+      object-fit: cover; 
+      object-position: center 10%; 
+    }
+
+    .card h3 { 
+      margin: 10px 0 8px 0;
+      font-size: 1.4rem;
+    }
+    .card h3 a { color: var(--primary-blue); text-decoration: none; }
+    .card h3 a:hover { color: var(--accent-blue); text-decoration: underline; }
+    
+    .card p { font-size: 1rem; color: #444; margin-bottom: 8px; line-height: 1.4; }
+    
+    /* 專業領域樣式 */
+    .expertise {
+      font-size: 0.95rem;
+      color: var(--accent-blue);
+      font-weight: 500;
+      margin-top: 10px;
+      padding-top: 10px;
+      border-top: 1px dashed #eee;
+      width: 80%;
+    }
+
+    .tag { font-size: 0.85rem; padding: 5px 15px; border-radius: 20px; margin-top: 5px; }
+    .tag.qc { background: #e3f2fd; color: #1976d2; }
+    .tag.qm { background: #f1f8e9; color: #689f38; }
+
+    footer { text-align: center; padding: 40px; background: #222; color: #bbb; margin-top: 50px; }
+  </style>
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="logo"><a href="../../index_en.html">QCQM Research Center</a></div>
+  <div class="nav-container">
+    <ul>
+      <li><a href="../../index_en.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="research.html">Research</a></li>
+      <li><a href="people.html">People</a></li>
+      <li><a href="news.html">News and Events</a></li>
+    </ul>
+    <div class="lang-switch">
+      <a href="../zh/people.html">中文</a> | <a href="people.html" class="active">EN</a>
+    </div>
+  </div>
+</nav>
+
+<div class="section">
+  <h1 class="section-title">Research Faculty</h1>
+  <div class="grid">
+    <div class="card director">
+      <div class="profile-img-container">
+        <img src="../../images/chiu.jpg" alt="Kuei-Lin Chiu" class="profile-img">
+      </div>
+      <h3><a href="https://eins0728.github.io/" target="_blank">Kuei-Lin Chiu</a></h3>
+      <p>Dept. of Physics, NSYSU<br>Associate Professor / Director</p>
+      <span class="tag qc">Quantum Computing Group</span>
+      <div class="expertise">Superconducting Qubits, Low-Temp Physics</div>
+    </div>
+
+    <div class="card">
+      <div class="profile-img-container">
+        <img src="../../images/chen_yh.jpg" alt="Yi-Hsin Chen" class="profile-img">
+      </div>
+      <h3><a href="https://sites.google.com/site/yihsinchen920/home" target="_blank">Yi-Hsin Chen</a></h3>
+      <p>Dept. of Physics, NSYSU<br>Associate Professor</p>
+      <span class="tag qc">Quantum Computing Group</span>
+      <div class="expertise">Quantum Optics</div>
+    </div>
+
+    <div class="card">
+      <div class="profile-img-container">
+        <img src="../../images/chu.jpg" alt="Chia-Yi Ju" class="profile-img">
+      </div>
+      <h3><a href="https://chiayiju.github.io/CYJu.html" target="_blank">Chia-Yi Ju</a></h3>
+      <p>Dept. of Physics, NSYSU<br>Assistant Professor</p>
+      <span class="tag qc">Quantum Computing Group</span>
+      <div class="expertise">Quantum Information Theory</div>
+    </div>
+
+    <div class="card">
+      <div class="profile-img-container">
+        <img src="../../images/lin.jpg" alt="Yen-Hsiang Lin" class="profile-img">
+      </div>
+      <h3><a href="https://www.phys.nthu.edu.tw/~yhlin/SQCLab/zh-tw/index.html" target="_blank">Yen-Hsiang Lin</a></h3>
+      <p>Dept. of Physics, NTHU<br>Associate Professor</p>
+      <span class="tag qc">Quantum Computing Group</span>
+      <div class="expertise">Fluxonium Superconducting Qubits</div>
+    </div>
+
+    <div class="card">
+      <div class="profile-img-container">
+        <img src="../../images/ko.jpg" alt="Chung-Ting Ke" class="profile-img">
+      </div>
+      <h3><a href="https://kequantumlab.wordpress.com/" target="_blank">Chung-Ting Ke</a></h3>
+      <p>Institute of Physics, Academia Sinica<br>Assistant Research Fellow</p>
+      <span class="tag qc">Quantum Computing Group</span>
+      <div class="expertise">Superconducting Qubits, 2D Material Josephson Junctions</div>
+    </div>
+
+    <div class="card">
+      <div class="profile-img-container">
+        <img src="../../images/chen_ct.jpg" alt="Chi-Te Chen" class="profile-img">
+      </div>
+      <h3><a href="https://www.phys.sinica.edu.tw/~quela/" target="_blank">Chii-Dong Chen</a></h3>
+      <p>Institute of Physics, Academia Sinica<br>Distinguished Research Fellow</p>
+      <span class="tag qc">Quantum Computing Group</span>
+      <div class="expertise">Superconducting Quantum Computing</div>
+    </div>
+
+    <div class="card">
+      <div class="profile-img-container">
+        <img src="../../images/chuang.jpg" alt="Feng-Chuan Chuang" class="profile-img">
+      </div>
+      <h3><a href="https://www2.nsysu.edu.tw/cmrlab/" target="_blank">Feng-Chuan Chuang</a></h3>
+      <p>Dept. of Physics, NSYSU<br>Distinguished Professor</p>
+      <span class="tag qm">Quantum Materials Group</span>
+      <div class="expertise">Band Structure Calculations of Quantum Materials</div>
+    </div>
+
+    <div class="card">
+      <div class="profile-img-container">
+        <img src="../../images/pham.png" alt="Phuong V. Pham" class="profile-img">
+      </div>
+      <h3><a href="https://sites.google.com/view/phuonggroup/home?authuser=0" target="_blank">Phuong V. Pham</a></h3>
+      <p>Dept. of Physics, NSYSU<br>Assistant Professor</p>
+      <span class="tag qm">Quantum Materials Group</span>
+      <div class="expertise">CVD Growth of Quantum Materials</div>
+    </div>
+
+    <div class="card">
+      <div class="profile-img-container">
+        <img src="../../images/yang.png" alt="Hung-Duen Yang" class="profile-img">
+      </div>
+      <h3><a href="https://yanglowtemperature.weebly.com/?fbclid=IwAR06Wmc8hP-xEYAKXzANZkmKR74zpRwSipjgA-HsEY8NOs2-sOquNGwCwr8" target="_blank">Hung-Duen Yang</a></h3>
+      <p>Dept. of Physics, NSYSU<br>Chair Professor</p>
+      <span class="tag qm">Quantum Materials Group</span>
+      <div class="expertise">Superconducting Materials</div>
+    </div>
+
+    <div class="card">
+      <div class="profile-img-container">
+        <img src="../../images/chen_hj.png" alt="Hsin-Chu Chen" class="profile-img">
+      </div>
+      <h3><a href="https://sat.nsysu.edu.tw/p/405-1325-302167,c25997.php?Lang=zh-tw" target="_blank">Hsin-Chu Chen</a></h3>
+      <p>College of Semiconductor and Advanced Technology, NSYSU<br>Assistant Professor</p>
+      <span class="tag qm">Quantum Materials Group</span>
+      <div class="expertise">CVD Growth of Quantum Materials</div>
+    </div>
+
+    <div class="card">
+      <div class="profile-img-container">
+        <img src="../../images/tseng.jpg" alt="Wei-Lung Tseng" class="profile-img">
+      </div>
+      <h3><a href="https://tracebioanalysis.nicepage.io/?version=8ecd39a8-a382-40da-bee0-63f70baa7fe7&uid=53a14387-4fde-4af9-8506-b6b61da61775" target="_blank">Wei-Lung Tseng</a></h3>
+      <p>Dept. of Physics, NSYSU<br>Distinguished Professor</p>
+      <span class="tag qm">Quantum Materials Group</span>
+      <div class="expertise">Synthesis and Application of Nanoparticles</div>
+    </div>
+  </div>
+
+  <h1 class="section-title">International Advisory Board</h1>
+  <div class="grid">
+    <div class="card">
+      <div class="profile-img-container">
+        <img src="../../images/oliver.jpg" alt="W  O" class="profile-img">
+      </div>
+      <h3><a href="" target="_blank">W O</a></h3>
+      <p>MIT<br>Professor</p>
+      <div class="expertise">Superconducting Quantum Computing</div>
+    </div>
+
+    <div class="card">
+      <div class="profile-img-container">
+        <img src="../../images/fatemi.jpg" alt="V F" class="profile-img">
+      </div>
+      <h3><a href="" target="_blank">V F</a></h3>
+      <p>Cornell University<br>Assistant Professor</p>
+      <div class="expertise"></div>
+    </div>
+
+    <div class="card">
+      <div class="profile-img-container">
+        <img src="../../images/connolly.jfif" alt="M C" class="profile-img">
+      </div>
+      <h3><a href="" target="_blank">M C</a></h3>
+      <p>Imperial College London<br>Assistant Professor</p>
+      <div class="expertise"></div>
+    </div>
+  </div>
+</div>
+
+<footer>© QCQM Research Center, NSYSU</footer>
+</body>
+</html>

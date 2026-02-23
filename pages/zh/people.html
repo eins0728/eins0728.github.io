@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <title>成員介紹 | QCQM</title>
+  <link rel="stylesheet" href="../../css/main.css">
+  <style>
+    /* 針對 People 頁面：頭像放大與排版優化 */
+    .section-title {
+      text-align: center;
+      color: var(--primary-blue);
+      margin: 60px 0 40px 0;
+      font-size: 2.2rem;
+      border-bottom: 2px solid #eee;
+      padding-bottom: 15px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); 
+      gap: 40px;
+      margin-bottom: 50px;
+    }
+
+    .card { 
+      text-align: center; 
+      display: flex; 
+      flex-direction: column; 
+      align-items: center; 
+      padding: 30px 20px;
+      background: white;
+      border-radius: 15px;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    }
+    .card:hover { transform: translateY(-5px); box-shadow: 0 10px 25px rgba(0,0,0,0.1); }
+
+    .profile-img-container {
+      width: 250px; 
+      height: 250px; 
+      margin-bottom: 25px;
+      border-radius: 50%; 
+      overflow: hidden;   
+      border: 6px solid #fff; 
+      box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+      background: #f8f8f8;
+    }
+
+    .profile-img { 
+      width: 100%;
+      height: 100%;
+      object-fit: cover; 
+      object-position: center 10%; 
+    }
+
+    .card h3 { 
+      margin: 10px 0 8px 0;
+      font-size: 1.4rem;
+    }
+    .card h3 a { color: var(--primary-blue); text-decoration: none; }
+    .card h3 a:hover { color: var(--accent-blue); text-decoration: underline; }
+    
+    .card p { font-size: 1rem; color: #444; margin-bottom: 8px; line-height: 1.4; }
+    
+    /* 專業領域樣式 */
+    .expertise {
+      font-size: 0.95rem;
+      color: var(--accent-blue);
+      font-weight: 500;
+      margin-top: 10px;
+      padding-top: 10px;
+      border-top: 1px dashed #eee;
+      width: 80%;
+    }
+
+    .tag { font-size: 0.85rem; padding: 5px 15px; border-radius: 20px; margin-top: 5px; }
+    .tag.qc { background: #e3f2fd; color: #1976d2; }
+    .tag.qm { background: #f1f8e9; color: #689f38; }
+
+    footer { text-align: center; padding: 40px; background: #222; color: #bbb; margin-top: 50px; }
+  </style>
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="logo"><a href="../../index.html">QCQM Research Center</a></div>
+  <div class="nav-container">
+    <ul>
+      <li><a href="../../index.html">首頁</a></li>
+      <li><a href="about.html">關於中心</a></li>
+      <li><a href="research.html">研究領域</a></li>
+      <li><a href="people.html">成員介紹</a></li>
+      <li><a href="news.html">最新消息與活動</a></li>
+    </ul>
+    <div class="lang-switch">
+      <a href="people.html" class="active">中文</a> | <a href="../en/people.html">EN</a>
+    </div>
+  </div>
+</nav>
+
+<div class="section">
+  <h1 class="section-title">研究人員 (Research Faculty)</h1>
+  <div class="grid">
+    <div class="card director">
+      <div class="profile-img-container">
+        <img src="../../images/chiu.jpg" alt="邱奎霖" class="profile-img">
+      </div>
+      <h3><a href="https://eins0728.github.io/" target="_blank">邱奎霖 Kuei-Lin Chiu</a></h3>
+      <p>國立中山大學物理系<br>副教授 / 主任</p>
+      <span class="tag qc">Quantum Computing Group</span>
+      <div class="expertise">超導量子位元、低溫物理</div>
+    </div>
+
+    <div class="card">
+      <div class="profile-img-container">
+        <img src="../../images/chen_yh.jpg" alt="陳易馨" class="profile-img">
+      </div>
+      <h3><a href="https://sites.google.com/site/yihsinchen920/home" target="_blank">陳易馨 Yi-Hsin Chen</a></h3>
+      <p>國立中山大學物理系<br>副教授</p>
+      <span class="tag qc">Quantum Computing Group</span>
+      <div class="expertise">量子光學</div>
+    </div>
+
+    <div class="card">
+      <div class="profile-img-container">
+        <img src="../../images/chu.jpg" alt="朱家誼" class="profile-img">
+      </div>
+      <h3><a href="https://chiayiju.github.io/CYJu.html" target="_blank">朱家誼 Chia-Yi Ju</a></h3>
+      <p>國立中山大學物理系<br>助理教授</p>
+      <span class="tag qc">Quantum Computing Group</span>
+      <div class="expertise">量子資訊理論</div>
+    </div>
+
+    <div class="card">
+      <div class="profile-img-container">
+        <img src="../../images/lin.jpg" alt="林晏詳" class="profile-img">
+      </div>
+      <h3><a href="https://www.phys.nthu.edu.tw/~yhlin/SQCLab/zh-tw/index.html" target="_blank">林晏詳 Yen-Hsiang Lin</a></h3>
+      <p>國立清華大學物理系<br>副教授</p>
+      <span class="tag qc">Quantum Computing Group</span>
+      <div class="expertise">Fluxonium超導量子位元</div>
+    </div>
+
+    <div class="card">
+      <div class="profile-img-container">
+        <img src="../../images/ko.jpg" alt="柯忠廷" class="profile-img">
+      </div>
+      <h3><a href="https://kequantumlab.wordpress.com/" target="_blank">柯忠廷 Chung-Ting Ke</a></h3>
+      <p>中央研究院物理研究所<br>助研究員</p>
+      <span class="tag qc">Quantum Computing Group</span>
+      <div class="expertise">超導量子位元，二維材料Josephson junction元件</div>
+    </div>
+
+    <div class="card">
+      <div class="profile-img-container">
+        <img src="../../images/chen_ct.jpg" alt="陳啟東" class="profile-img">
+      </div>
+      <h3><a href="https://www.phys.sinica.edu.tw/~quela/" target="_blank">陳啟東 Chii-Dong Chen</a></h3>
+      <p>中央研究院物理研究所<br>特聘研究員</p>
+      <span class="tag qc">Quantum Computing Group</span>
+      <div class="expertise">超導量子計算</div>
+    </div>
+
+    <div class="card">
+      <div class="profile-img-container">
+        <img src="../../images/chuang.jpg" alt="莊豐權" class="profile-img">
+      </div>
+      <h3><a href="https://www2.nsysu.edu.tw/cmrlab/" target="_blank">莊豐權 Feng-Chuan Chuang</a></h3>
+      <p>國立中山大學物理系<br>特聘教授</p>
+      <span class="tag qm">Quantum Materials Group</span>
+      <div class="expertise">量子材料能帶計算</div>
+    </div>
+
+    <div class="card">
+      <div class="profile-img-container">
+        <img src="../../images/pham.png" alt="Phuong V. Pham" class="profile-img">
+      </div>
+      <h3><a href="https://sites.google.com/view/phuonggroup/home?authuser=0" target="_blank">Phuong V. Pham</a></h3>
+      <p>國立中山大學物理系<br>助理教授</p>
+      <span class="tag qm">Quantum Materials Group</span>
+      <div class="expertise">量子材料CVD成長</div>
+    </div>
+
+    <div class="card">
+      <div class="profile-img-container">
+        <img src="../../images/yang.png" alt="楊弘敦" class="profile-img">
+      </div>
+      <h3><a href="https://yanglowtemperature.weebly.com/?fbclid=IwAR06Wmc8hP-xEYAKXzANZkmKR74zpRwSipjgA-HsEY8NOs2-sOquNGwCwr8" target="_blank">楊弘敦 Hung-Duen Yang</a></h3>
+      <p>國立中山大學物理系<br>講座教授</p>
+      <span class="tag qm">Quantum Materials Group</span>
+      <div class="expertise">超導材料</div>
+    </div>
+
+    <div class="card">
+      <div class="profile-img-container">
+        <img src="../../images/chen_hj.png" alt="陳信助" class="profile-img">
+      </div>
+      <h3><a href="https://sat.nsysu.edu.tw/p/405-1325-302167,c25997.php?Lang=zh-tw" target="_blank">陳信助 Hsin-Chu Chen</a></h3>
+      <p>國立中山大學半導體學院<br>助理教授</p>
+      <span class="tag qm">Quantum Materials Group</span>
+      <div class="expertise">量子材料CVD成長</div>
+    </div>
+
+    <div class="card">
+      <div class="profile-img-container">
+        <img src="../../images/tseng.jpg" alt="曾韋龍" class="profile-img">
+      </div>
+      <h3><a href="https://tracebioanalysis.nicepage.io/?version=8ecd39a8-a382-40da-bee0-63f70baa7fe7&uid=53a14387-4fde-4af9-8506-b6b61da61775" target="_blank">曾韋龍 Wei-Lung Tseng</a></h3>
+      <p>國立中山大學物理系<br>特聘教授</p>
+      <span class="tag qm">Quantum Materials Group</span>
+      <div class="expertise">奈米粒子合成與應用</div>
+    </div>
+  </div>
+
+  <h1 class="section-title">國際諮詢委員會 (International Advisory Board)</h1>
+  <div class="grid">
+    <div class="card">
+      <div class="profile-img-container">
+        <img src="../../images/oliver.jpg" alt="W O" class="profile-img">
+      </div>
+      <h3><a href="" target="_blank">W D. O</a></h3>
+      <p>美國麻省<br>教授兼主任</p>
+      <div class="expertise">超導量子計算</div>
+    </div>
+
+    <div class="card">
+      <div class="profile-img-container">
+        <img src="../../images/fatemi.jpg" alt="V F" class="profile-img">
+      </div>
+      <h3><a href="" target="_blank">V F</a></h3>
+      <p>美國康乃爾大學應用物理系<br>助理教授</p>
+      <div class="expertise">二維材料超導量子位元</div>
+    </div>
+
+    <div class="card">
+      <div class="profile-img-container">
+        <img src="../../images/connolly.jfif" alt="M C" class="profile-img">
+      </div>
+      <h3><a href="" target="_blank">M C</a></h3>
+      <p>倫敦帝國理工學院物理系<br>助理教授</p>
+      <div class="expertise">拓樸材料之超導量子位元</div>
+    </div>
+  </div>
+</div>
+
+<footer>© QCQM Research Center, NSYSU</footer>
+</body>
+</html>
