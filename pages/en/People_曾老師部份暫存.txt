@@ -1,0 +1,10 @@
+    <div class="card">
+      <div class="profile-img-container">
+        <img src="../../images/tseng.jpg" alt="Wei-Lung Tseng" class="profile-img">
+      </div>
+      <h3><a href="https://tracebioanalysis.nicepage.io/?version=8ecd39a8-a382-40da-bee0-63f70baa7fe7&uid=53a14387-4fde-4af9-8506-b6b61da61775" target="_blank">Wei-Lung Tseng</a></h3>
+      <p>Dept. of Physics, NSYSU<br>Distinguished Professor</p>
+      <span class="tag qm">Quantum Materials Group</span>
+      <div class="expertise">Synthesis and Application of Nanoparticles</div>
+    </div>
+  </div>
